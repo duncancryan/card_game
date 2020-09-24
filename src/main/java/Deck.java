@@ -20,10 +20,15 @@ public class Deck {
         this.cards.add(card);
     }
 
-    // populateDeck()
-    // if !cards.contains(card)
-        // for suit in suits get each suit
-            // for value in values get each value
-                //Card card = new Card(suit, value)
-                // addCardToDeck(card)
+    public void populateDeck(){
+        CardSuit[] cardSuits = CardSuit.values();
+        CardValue[] cardValues = CardValue.values();
+
+        for(CardSuit suit : cardSuits){
+            for(CardValue value : cardValues){
+                Card card = new Card(suit, value);
+                addCardToDeck(card);
+            }
+        }
+    }
 }
