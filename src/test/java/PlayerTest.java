@@ -24,4 +24,5 @@ public class PlayerTest {
         assertEquals(null, player1.getCard());
     }
 
+
 }
