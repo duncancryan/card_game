@@ -20,6 +20,10 @@ public class Card {
         return cardValue;
     }
 
+    public int getValueOfEnum(){
+        return this.cardValue.getValue();
+    }
+
     public void setCardValue(CardValue cardValue) {
         this.cardValue = cardValue;
     }
