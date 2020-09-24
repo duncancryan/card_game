@@ -1,18 +1,19 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
 public class DeckTest {
 
     private Deck deck;
     private Card card;
+    private Card card01;
 
     @Before
     public void before(){
         deck = new Deck();
         card = new Card(CardSuit.SPADES, CardValue.ACE);
+        card01 = new Card(CardSuit.CLUBS, CardValue.ACE);
     }
 
     @Test
@@ -34,9 +35,15 @@ public class DeckTest {
 
     @Test
     public void canShuffleDeck(){
-        card = new Card(CardSuit.CLUBS, CardValue.ACE);
         deck.populateDeck();
         deck.shuffleDeck();
         assertNotEquals(card, deck.getCards().get(0));
+    }
+
+    @Test
+    public void canDealCard(){
+        deck.populateDeck();
+        Card cardToRemove = deck.getCards().get(0);
+        assertEquals(cardToRemove, deck.dealCard());
     }
 }
