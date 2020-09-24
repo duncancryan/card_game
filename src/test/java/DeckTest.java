@@ -44,6 +44,6 @@ public class DeckTest {
     public void canDealCard(){
         deck.populateDeck();
         Card cardToRemove = deck.getCards().get(0);
-        assertEquals(cardToRemove, deck.dealCard());
+        assertEquals(cardToRemove, deck.removeCard());
     }
 }

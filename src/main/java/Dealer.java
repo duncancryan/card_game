@@ -9,4 +9,9 @@ public class Dealer {
     public Deck getDeck() {
         return deck;
     }
+
+    public void deal(Player player){
+        Card card = this.deck.removeCard();
+        player.setCard(card);
+    }
 }

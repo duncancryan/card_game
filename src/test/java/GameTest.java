@@ -1,4 +1,7 @@
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class GameTest {
 
@@ -12,12 +15,32 @@ public class GameTest {
 
     @Before
     public void  before(){
-        game = new Game(dealer, player1, player2);
-        dealer = new Dealer(deck);
         deck = new Deck();
+        dealer = new Dealer(deck);
         player1 = new Player();
         player2 = new Player();
+        game = new Game(dealer, player1, player2);
         highCard = new Card(CardSuit.SPADES, CardValue.ACE);
         lowCard = new Card(CardSuit.DIAMONDS, CardValue.EIGHT);
+    }
+
+    @Test
+    public void hasDealer(){
+        assertEquals(dealer, game.getDealer());
+    }
+
+    @Test
+    public void hasPlayer1(){
+        assertEquals(player1, game.getPlayer1());
+    }
+
+    @Test
+    public void hasPlayer2(){
+        assertEquals(player2, game.getPlayer2());
+    }
+
+    @Test
+    public void canFindWinner(){
+
     }
 }
