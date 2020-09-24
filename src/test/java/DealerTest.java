@@ -33,7 +33,7 @@ public class DealerTest {
         deck = new Deck();
         dealer = new Dealer(deck);
         deck.populateDeck();
-        Card card = new Card(CardSuit.CLUBS, CardValue.ACE);
+        Card card = deck.getCards().get(0);
         dealer.deal(player);
         assertEquals(card, player.getCard());
     }
