@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class DeckTest {
 
@@ -31,4 +32,11 @@ public class DeckTest {
         assertEquals(52, deck.getNumberOfCards());
     }
 
+    @Test
+    public void canShuffleDeck(){
+        card = new Card(CardSuit.CLUBS, CardValue.ACE);
+        deck.populateDeck();
+        deck.shuffleDeck();
+        assertNotEquals(card, deck.getCards().get(0));
+    }
 }
