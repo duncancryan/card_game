@@ -31,4 +31,12 @@ public abstract class Participant {
         }
         return total;
     }
+
+    public boolean checkBust(){
+        int total = this.getHandValue();
+        if (total > 21){
+            return true;
+        }
+        return false;
+    }
 }

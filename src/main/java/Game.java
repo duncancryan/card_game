@@ -35,13 +35,12 @@ public class Game {
             return player;
         }
     }
-
+//
 //    public String playGame(){
-//        this.dealer.getDeck().populateDeck();
-//        this.dealer.getDeck().shuffleDeck();
-//        this.dealer.deal(player1);
-//        this.dealer.deal(player2);
-//        Player result = this.determineWinner();
+//        this.dealer.startGame(this.player);
+//        Participant result = this.determineWinner();
+//
+//
 //        if (result == player1){
 //            return "Player 1 WINS!!!";
 //        }
