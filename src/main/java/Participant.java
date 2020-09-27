@@ -23,4 +23,12 @@ public abstract class Participant {
     public void addCardToHand(Card card){
         this.hand.add(card);
     }
+
+    public int getHandValue(){
+        int total = 0;
+        for (Card card : this.hand){
+            total += card.getValueOfEnum();
+        }
+        return total;
+    }
 }
