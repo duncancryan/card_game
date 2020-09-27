@@ -12,9 +12,9 @@ public class Dealer extends Participant{
         return deck;
     }
 
-    //    public void deal(Player player){
+//        public void dealToPlayer(Player player){
 //        Card card = this.deck.removeCard();
-////        player.setCard(card);
+//        player.getHand().add(card);
 //    }
 //
 //    public void firstDeal(Player player){

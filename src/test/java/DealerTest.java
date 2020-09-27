@@ -14,6 +14,7 @@ public class DealerTest {
         deck = new Deck();
         dealer = new Dealer(deck);
         player = new Player();
+        deck.populateDeck();
     }
 
     @Test
@@ -28,18 +29,13 @@ public class DealerTest {
 
     @Test
     public void dealerDeckIsPopulated(){
-        deck.populateDeck();
         int deckNum = dealer.getDeck().getNumberOfCards();
         assertEquals(52, deckNum);
     }
 
-//    @Test
-//    public void canDealCard(){
-//        deck = new Deck();
-//        dealer = new Dealer(deck);
-//        deck.populateDeck();
-//        Card card = deck.getCards().get(0);
-//        dealer.deal(player);
-//        assertEquals(card, player.getCard());
-//    }
+    @Test
+    public void canDealToPlayer(){
+        dealer.dealToPlayer(player);
+        assertEquals(1, player.getSizeOfHand());
+    }
 }
