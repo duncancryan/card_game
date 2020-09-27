@@ -22,6 +22,11 @@ public class DealerTest {
     }
 
     @Test
+    public void dealerHandStartsAt0(){
+        assertEquals(0, dealer.getSizeOfHand());
+    }
+
+    @Test
     public void dealerDeckIsPopulated(){
         deck.populateDeck();
         int deckNum = dealer.getDeck().getNumberOfCards();
