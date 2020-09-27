@@ -1,16 +1,22 @@
+import java.util.ArrayList;
+
 public class Player {
 
-    private Card card;
+    private ArrayList<Card> hand;
 
     public Player(){
-        this.card = null;
+        this.hand = new ArrayList<>();
     }
 
-    public Card getCard() {
-        return card;
+    public ArrayList<Card> getHand() {
+        return hand;
     }
 
-    public void setCard(Card card) {
-        this.card = card;
+    public void setHand(ArrayList<Card> hand) {
+        this.hand = hand;
+    }
+
+    public int getSizeOfHand(){
+        return this.hand.size();
     }
 }

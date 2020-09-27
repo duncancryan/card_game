@@ -20,8 +20,8 @@ public class PlayerTest {
     }
 
     @Test
-    public void handStartsAsNull(){
-        assertEquals(null, player1.getCard());
+    public void handStartsAt0(){
+        assertEquals(0, player1.getSizeOfHand());
     }
 
 

@@ -40,12 +40,12 @@ public class GameTest {
         assertEquals(player2, game.getPlayer2());
     }
 
-    @Test
-    public void canFindWinner(){
-        player1.setCard(highCard);
-        player2.setCard(lowCard);
-        Player result = game.determineWinner();
-        assertEquals(player1, result);
-    }
-    
+//    @Test
+//    public void canFindWinner(){
+//        player1.setCard(highCard);
+//        player2.setCard(lowCard);
+//        Player result = game.determineWinner();
+//        assertEquals(player1, result);
+//    }
+
 }

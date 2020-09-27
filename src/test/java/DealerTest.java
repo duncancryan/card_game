@@ -28,13 +28,13 @@ public class DealerTest {
         assertEquals(52, deckNum);
     }
 
-    @Test
-    public void canDealCard(){
-        deck = new Deck();
-        dealer = new Dealer(deck);
-        deck.populateDeck();
-        Card card = deck.getCards().get(0);
-        dealer.deal(player);
-        assertEquals(card, player.getCard());
-    }
+//    @Test
+//    public void canDealCard(){
+//        deck = new Deck();
+//        dealer = new Dealer(deck);
+//        deck.populateDeck();
+//        Card card = deck.getCards().get(0);
+//        dealer.deal(player);
+//        assertEquals(card, player.getCard());
+//    }
 }

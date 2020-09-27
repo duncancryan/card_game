@@ -34,28 +34,28 @@ public class Game {
         this.player2 = player2;
     }
 
-    public Player determineWinner(){
-        Card player1Card = player1.getCard();
-        Card player2Card = player2.getCard();
-        if (player1Card.getValueOfEnum() > player2Card.getValueOfEnum()){
-            return player1;
-        }
-        else{
-            return player2;
-        }
-    }
+//    public Player determineWinner(){
+//        Card player1Card = player1.getCard();
+//        Card player2Card = player2.getCard();
+//        if (player1Card.getValueOfEnum() > player2Card.getValueOfEnum()){
+//            return player1;
+//        }
+//        else{
+//            return player2;
+//        }
+//    }
 
-    public String playGame(){
-        this.dealer.getDeck().populateDeck();
-        this.dealer.getDeck().shuffleDeck();
-        this.dealer.deal(player1);
-        this.dealer.deal(player2);
-        Player result = this.determineWinner();
-        if (result == player1){
-            return "Player 1 WINS!!!";
-        }
-        else{
-            return "Player 2 WINS!!!";
-        }
-    }
+//    public String playGame(){
+//        this.dealer.getDeck().populateDeck();
+//        this.dealer.getDeck().shuffleDeck();
+//        this.dealer.deal(player1);
+//        this.dealer.deal(player2);
+//        Player result = this.determineWinner();
+//        if (result == player1){
+//            return "Player 1 WINS!!!";
+//        }
+//        else{
+//            return "Player 2 WINS!!!";
+//        }
+//    }
 }
