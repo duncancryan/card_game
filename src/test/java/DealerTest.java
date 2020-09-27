@@ -33,9 +33,9 @@ public class DealerTest {
         assertEquals(52, deckNum);
     }
 
-    @Test
-    public void canDealToPlayer(){
-        dealer.dealToPlayer(player);
-        assertEquals(1, player.getSizeOfHand());
-    }
+//    @Test
+//    public void canDealToPlayer(){
+//        dealer.dealToPlayer(player);
+//        assertEquals(1, player.getSizeOfHand());
+//    }
 }

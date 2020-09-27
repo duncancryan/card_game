@@ -19,4 +19,8 @@ public abstract class Participant {
     public int getSizeOfHand(){
         return this.hand.size();
     }
+
+    public void addCardToHand(Card card){
+        this.hand.add(card);
+    }
 }

@@ -19,7 +19,7 @@ public class PlayerTest {
         player1 = new Player();
         player2 = new Player();
         dealer = new Dealer(deck);
-        card = new Card(CardSuit.SPADES, CardValue.ACE)
+        card = new Card(CardSuit.SPADES, CardValue.ACE);
     }
 
     @Test
