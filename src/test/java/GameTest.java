@@ -9,8 +9,7 @@ public class GameTest {
     private Game game;
     private Deck deck;
     private Dealer dealer;
-    private Player player1;
-    private Player player2;
+    private Player player;
     private Card highCard1;
     private Card lowCard1;
     private Card highCard2;
@@ -20,13 +19,16 @@ public class GameTest {
     public void  before(){
         deck = new Deck();
         dealer = new Dealer(deck);
-        player1 = new Player();
-        player2 = new Player();
-        game = new Game(dealer, player1, player2);
+        player = new Player();
+        game = new Game(dealer, player);
         highCard1 = new Card(CardSuit.SPADES, CardValue.KING);
         highCard2 = new Card(CardSuit.CLUBS, CardValue.NINE);
         lowCard1 = new Card(CardSuit.DIAMONDS, CardValue.THREE);
-        lowCard1 = new Card(CardSuit.HEARTS, CardValue.FIVE);
+        lowCard2 = new Card(CardSuit.HEARTS, CardValue.FIVE);
+        dealer.addCardToHand(highCard1);
+        dealer.addCardToHand(highCard2);
+        player.addCardToHand(lowCard1);
+        player.addCardToHand(lowCard2);
     }
 
     @Test
@@ -35,23 +37,13 @@ public class GameTest {
     }
 
     @Test
-    public void hasPlayer1(){
-        assertEquals(player1, game.getPlayer1());
-    }
-
-    @Test
-    public void hasPlayer2(){
-        assertEquals(player2, game.getPlayer2());
+    public void hasPlayer(){
+        assertEquals(player, game.getPlayer());
     }
 
     @Test
     public void canFindWinner(){
-        dealer.addCardToHand(highCard1);
-        dealer.addCardToHand(highCard2);
-        player1.addCardToHand(lowCard1);
-        player1.addCardToHand(lowCard2);
-        Player result = game.determineWinner();
-        assertEquals(dealer, result);
+        assertEquals(dealer, game.determineWinner());
     }
 
 }

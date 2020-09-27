@@ -1,13 +1,11 @@
 public class Game {
 
     private Dealer dealer;
-    private Player player1;
-    private Player player2;
+    private Player player;
 
-    public Game(Dealer dealer, Player player1, Player player2) {
+    public Game(Dealer dealer, Player player) {
         this.dealer = dealer;
-        this.player1 = player1;
-        this.player2 = player2;
+        this.player = player;
     }
 
     public Dealer getDealer() {
@@ -18,32 +16,25 @@ public class Game {
         this.dealer = dealer;
     }
 
-    public Player getPlayer1() {
-        return player1;
+    public Player getPlayer() {
+        return this.player;
     }
 
-    public void setPlayer1(Player player1) {
-        this.player1 = player1;
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
-    public Player getPlayer2() {
-        return player2;
-    }
 
-    public void setPlayer2(Player player2) {
-        this.player2 = player2;
+    public Participant determineWinner(){
+        int playerTotal = player.getHandValue();
+        int dealerTotal = dealer.getHandValue();
+        if (dealerTotal > playerTotal){
+            return dealer;
+        }
+        else {
+            return player;
+        }
     }
-
-//    public Player determineWinner(){
-//        Card player1Card = player1.getCard();
-//        Card player2Card = player2.getCard();
-//        if (player1Card.getValueOfEnum() > player2Card.getValueOfEnum()){
-//            return player1;
-//        }
-//        else{
-//            return player2;
-//        }
-//    }
 
 //    public String playGame(){
 //        this.dealer.getDeck().populateDeck();
