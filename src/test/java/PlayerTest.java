@@ -23,6 +23,4 @@ public class PlayerTest {
     public void handStartsAt0(){
         assertEquals(0, player1.getSizeOfHand());
     }
-
-
 }
