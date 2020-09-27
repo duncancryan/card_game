@@ -64,4 +64,14 @@ public class DealerTest {
         assertEquals(2, player.getSizeOfHand());
         assertEquals(2, dealer.getSizeOfHand());
     }
+
+    @Test
+    public void canGetHandTotal(){
+        Card card1 = new Card(CardSuit.SPADES, CardValue.FIVE);
+        Card card2 = new Card(CardSuit.CLUBS, CardValue.EIGHT);
+        dealer.addCardToHand(card1);
+        dealer.addCardToHand(card2);
+        int total = dealer.getHandValue();
+        assertEquals(13, total);
+    }
 }

@@ -30,4 +30,5 @@ public class Dealer extends Participant{
         this.dealToPlayer(player);
         this.dealToSelf();
     }
+
 }
