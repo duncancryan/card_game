@@ -12,10 +12,10 @@ public class Dealer extends Participant{
         return deck;
     }
 
-//        public void dealToPlayer(Player player){
-//        Card card = this.deck.removeCard();
-//        player.getHand().add(card);
-//    }
+    public void dealToPlayer(Player player){
+        Card card = this.deck.removeCard();
+        player.addCardToHand(card);
+    }
 //
 //    public void firstDeal(Player player){
 //        deck.shuffleDeck();

@@ -8,6 +8,7 @@ public class DealerTest {
     private Deck deck;
     private Dealer dealer;
     private Player player;
+    private Card card;
 
     @Before
     public void before(){
@@ -15,6 +16,7 @@ public class DealerTest {
         dealer = new Dealer(deck);
         player = new Player();
         deck.populateDeck();
+        card = new Card(CardSuit.SPADES, CardValue.ACE);
     }
 
     @Test
@@ -33,9 +35,15 @@ public class DealerTest {
         assertEquals(52, deckNum);
     }
 
-//    @Test
-//    public void canDealToPlayer(){
-//        dealer.dealToPlayer(player);
-//        assertEquals(1, player.getSizeOfHand());
-//    }
+    @Test
+    public void canAddToHand(){
+        dealer.addCardToHand(card);
+        assertEquals(1, dealer.getSizeOfHand());
+    }
+
+    @Test
+    public void canDealToPlayer(){
+        dealer.dealToPlayer(player);
+        assertEquals(1, player.getSizeOfHand());
+    }
 }
