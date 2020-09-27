@@ -46,4 +46,10 @@ public class DealerTest {
         dealer.dealToPlayer(player);
         assertEquals(1, player.getSizeOfHand());
     }
+
+    @Test
+    public void canDealToSelf(){
+        dealer.dealToSelf();
+        assertEquals(1, dealer.getSizeOfHand());
+    }
 }

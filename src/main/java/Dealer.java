@@ -16,6 +16,11 @@ public class Dealer extends Participant{
         Card card = this.deck.removeCard();
         player.addCardToHand(card);
     }
+
+    public void dealToSelf(){
+        Card card = this.deck.removeCard();
+        this.addCardToHand(card);
+    }
 //
 //    public void firstDeal(Player player){
 //        deck.shuffleDeck();
