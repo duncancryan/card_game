@@ -62,8 +62,28 @@ public class Game {
             System.out.println("Dealer hand: " + dealer.getHandValue());
             Scanner playerChoice = new Scanner(System.in);
             System.out.println("Stick or Twist?");
-            String choice = playerChoice.nextLine();
-            if ()
+            String choice = playerChoice.nextLine().toLowerCase();
+            if (choice.equals("stick") && player.getHandValue() < dealer.getHandValue()){
+                System.out.println("Dealer Wins!");
+            }
+            else if (choice.equals("stick") && dealer.getHandValue() < player.getHandValue() && dealer.getHandValue() < 16){
+                dealer.dealToSelf();
+                if (dealer.checkBlackJack()){
+                    System.out.println("BlackJack! Dealer Wins");
+                }
+                else if (dealer.checkBust()) {
+                    System.out.println("Bust! Player Wins");
+                }
+                else if (dealer.getHandValue() < player.getHandValue()){
+                    System.out.println("Player Wins!");
+                }
+                else if (player.getHandValue() < dealer.getHandValue(){
+                    System.out.println("Dealer Wins!");
+                }
+            }
+            else if (choice.equals("twist")){
+//                you left off here
+            }
 
         }
 //        if none of the above ask user if they want to stick or twist, if twist then deal them another card, check for bust or blackjack, and twist dealer if they are below 16
