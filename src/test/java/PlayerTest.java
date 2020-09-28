@@ -52,4 +52,15 @@ public class PlayerTest {
         assertEquals(true, player.checkBust());
     }
 
+    @Test
+    public void playerCanBlackJack(){
+        Card card1 = new Card(CardSuit.DIAMONDS, CardValue.SEVEN);
+        Card card2 = new Card(CardSuit.HEARTS, CardValue.NINE);
+        Card card3 = new Card(CardSuit.SPADES, CardValue.FIVE);
+        player.addCardToHand(card1);
+        player.addCardToHand(card2);
+        player.addCardToHand(card3);
+        assertEquals(true, player.checkBlackJack());
+    }
+
 }

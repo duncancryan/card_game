@@ -42,8 +42,8 @@ public class GameTest {
     }
 
     @Test
-    public void canFindWinner(){
-        assertEquals(dealer, game.determineWinner());
+    public void canCompareHands(){
+        assertEquals(dealer, game.compareHands());
     }
 
 }

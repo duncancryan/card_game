@@ -39,4 +39,12 @@ public abstract class Participant {
         }
         return false;
     }
+
+    public boolean checkBlackJack(){
+        int total = this.getHandValue();
+        if (total == 21){
+            return true;
+        }
+        return false;
+    }
 }
